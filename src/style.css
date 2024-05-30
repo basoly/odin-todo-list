@@ -1,0 +1,132 @@
+body {
+  background-color: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+/*   text-align: center; */
+  min-height: 100vh;
+}
+
+.container {
+/*   padding: 150px 200px; */
+  height: 300px;
+  width: 500px;
+  border-radius: 10px;
+  background-color: white;
+  display: flex;
+  flex-flow: row nowrap;
+/*   justify-content: space-between;
+  align-items: center; */
+  border: 1px solid black;
+  
+}
+
+.projects {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  background-color: lightcoral;
+  border: 1px dashed black;
+  border-radius: 5px;
+/*   flex-grow: 1; */
+  width: 150px;
+  height: 250px;
+  margin: auto;
+}
+
+.list-container {
+  background-color: lightgreen;
+  border: 1px dashed black;
+  border-radius: 5px;
+/*   flex-grow: 2; */
+  width: 300px;
+  height: 200px;
+  margin: auto;
+}
+
+.proj-header {
+  border: 1px dashed black;
+  background: aquamarine;
+  text-align: center;
+}
+
+.proj-item {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  border: 1px dashed black;
+  background: lightyellow;
+  text-align: center;
+  align-self: center;
+  margin-top: 5px;
+}
+
+.proj-label {
+  background: cornflowerblue;
+  border: 1px solid black;
+  border-left-width: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  color: white;
+}
+
+.delete-proj {
+  background-color: crimson;
+  border: 1px dashed black;
+  border-radius: 5px;
+  width: 20px;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.todo-container {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.todo-item {
+  display: flex;
+  flex-flow: row nowrap;
+  border: 1px solid black;
+  gap: 10px;
+}
+
+
+
+.input-container {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 60px;
+}
+
+.delete-item {
+  background-color: crimson;
+  border: 1px dashed black;
+  border-radius: 5px;
+  width: 20px;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+
+}
+
+.done-btn {
+  margin-left: auto;
+  background-color: green;
+  border: 1px dashed black;
+  border-radius: 5px;
+  width: 20px;
+  color: white;
+  text-align: center;
+}
+
+.fields {
+  background-color: wheat;
+}
