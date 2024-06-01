@@ -33,17 +33,21 @@
       <div class="list-container">
         <div class='input-container'>
           <div class="form-item">
+            <label for="title">Desc</label>
+            <input type="text" id='title' placeholder='title'>
+          </div>
+          <div class="form-item">
             <label for="description">Desc</label>
-            <input type="text" id='description' value='description'>
+            <input type="text" id='description' placeholder='description'>
           </div>
           <div>
             <label for="due">Due</label>
-            <input type="text" id='due' value='due'>
+            <input type="text" id='due' placeholder='due'>
           </div>
 
           <div>
             <label for='priority'>Priority</label>
-            <input type="text" id='priority' value='priority'>
+            <input type="text" id='priority' placeholder='priority'>
           </div>
         
           <button class='add-btn'>Add</button>
@@ -56,8 +60,8 @@
             <div class="fields">Label</div>
             <div class="fields">Due Date</div>
             <div class="fields">Priority</div>
-            <button class="done-btn">✔</button>
-            <button class="delete-item">X</button>
+            <button class="done-btn" type="button">✔</button>
+            <button class="delete-item" type="button">X</button>
           </div>
           <div class="todo-item">
             <button type="button">▶</button>
