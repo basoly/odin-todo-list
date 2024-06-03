@@ -3,11 +3,23 @@
 import addToList from './addToList'
 import createItem from './createItem';
 
-title = document.querySelector("#title");
-desc = document.querySelector('#description');
-due = document.querySelector('#due');
-priority = document.querySelector('#priority');
+const addItem = () => {
+    title = document.querySelector("#title");
+    desc = document.querySelector('#description');
+    due = document.querySelector('#due');
+    priority = document.querySelector('#priority');
 
-newItem = createItem(title.value, desc.value, due.value, priority.value)
+    var newItem = createItem(title.value, desc.value, due.value, priority.value)
 
-addToList(newItem);
+    addToList(newItem);
+
+    var elements = [title, desc, due, priority]
+
+    for (const input of elements) {
+    input.innerHTML = ''
+    }
+}
+
+
+
+export default addItem
