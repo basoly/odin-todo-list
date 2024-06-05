@@ -27,12 +27,20 @@ const addToList = (newItem) => {
     delBtn.setAttribute('type', 'button');
     delBtn.innerHTML = 'X';
 
+    // Transfering info from form input to DOM element
+    label.innerHTML = newItem.title;
+    dueDate.innerHTML = `<div>Due: ${newItem.due}</div>`;
+    priority.innerHTML = newItem.priority;
+    
+
+
+
     // add button event handlers
     delBtn.addEventListener('click', deleteItem);
 
 
     // add to item container
-    elements = [btn, label, dueDate, priority, doneBtn, delBtn];
+    var elements = [btn, label, dueDate, priority, doneBtn, delBtn];
 
     for (const elem of elements) {
         newElem.appendChild(elem);
