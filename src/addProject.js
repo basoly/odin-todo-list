@@ -1,7 +1,10 @@
 import createProject from './createProject'
 
 // newProj = createProject(projectTitleInput.value)
-
+const addProject2 = (newProject) => {
+  projectList.push(newProject);
+  console.log(projectList);
+}
 
 const addProject = (newProj) => {
     var title = newProj.title;
