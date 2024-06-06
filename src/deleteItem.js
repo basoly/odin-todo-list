@@ -1,5 +1,5 @@
 // delete to-do list item
-
+// get item id, then use id of item object clicked to remove said item using array.splice(array.indexOf(id),1)
 const deleteItem = (e) => {
     var id = e.target.parentNode.id;
     console.log(`This element's id is: ${id}`);
