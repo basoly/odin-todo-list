@@ -3,6 +3,12 @@
 import addToList from './addToList'
 import createItem from './createItem';
 
+
+const addItem2 = (item) => {
+  todoList.push(item);
+  console.log(todoList);
+}
+
 const addItem = () => {
     var title = document.querySelector("#title");
     var desc = document.querySelector('#description');
