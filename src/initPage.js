@@ -3,8 +3,11 @@ import deleteItem from "./deleteItem"
 import completeItem from "./completeItem"
 
 // add event handler to add button
+var todoList = [];
+var projectList = [];
 
 const initPage = () => {
+    //initiate initial page elements
     var addBtn = document.querySelector('.add-btn');
     var delBtn = document.querySelector('.delete-item');
     var doneBtn = document.querySelector('.done-btn');
