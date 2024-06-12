@@ -1,4 +1,7 @@
 import createProject from './createProject'
+import fetchData from './fetchData';
+import saveData from './saveData';
+import renderList from './renderList';
 
 // newProj = createProject(projectTitleInput.value)
 // const addProject2 = (newProject) => {
@@ -7,13 +10,22 @@ import createProject from './createProject'
 // }
 
 const addProject = () => {
-  let title = document.querySelector('#projectTitleInput');
+  let title = document.querySelector('#projectTitle');
   let newProj = createProject(title.value);
-  projectList.push(newProj);
+  let projectList = fetchData('projectList');
   console.log(projectList);
 
+  if (projectList) {
+    projectList.push(newProj);
+    saveData('projectList',projectList);
+} else {
+    projectList = [];
+    projectList.push(newProj);
+    saveData('projectList', projectList);
+}
+
   renderList('projectList', projectList);
-  title.value = '';
+  // title.value = '';
 
 
 

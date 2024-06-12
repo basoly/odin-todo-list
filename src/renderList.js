@@ -56,11 +56,13 @@ const renderList = (list, array) => {
   } else if (list == 'projectList') {
     // delete current items in projects container
     // add to respective container
-    var listContainer = document.querySelector('.projects');
+    alert('project List code');
+    var listContainer = document.querySelector('.project-list');
     listContainer.innerHTML = '';
         // for each key, generate the DOM items
     for (const item of array) {
       var title = item.title;
+      console.log(title);
       var newElem = document.createElement('li');
       newElem.classList.add('proj-item');
       newElem.setAttribute('id', item.id);
@@ -71,17 +73,18 @@ const renderList = (list, array) => {
       delBtn.setAttribute('type', 'button');
       delBtn.innerHTML = 'X';
   
-      titleContainer = title;
+      titleContainer.innerHTML = title;
       delBtn.addEventListener('click', deleteItem);
   
-      var elements = [titleContainer, delBtn]
-  
-      for (const elem of elements) {
-          newElem.appendChild(elem);
-      }
-  
+      var elements = [titleContainer, delBtn];
+
+      newElem.appendChild(titleContainer);
+      newElem.appendChild(delBtn);
+
+
+      console.log('append child loop #2');
       listContainer.appendChild(newElem);
-      console.log('Project List updated')
+      console.log('Project List updated');
     }
   }
 }
