@@ -2,12 +2,24 @@ import addItem from "./addItem";
 import deleteItem from "./deleteItem";
 // import completeItem from "./completeItem"
 import addProject from "./addProject";
+import renderList from "./renderList";
+import fetchData from "./fetchData";
 
 // add event handler to add button
 var todoList = [];
 var projectList = [];
 
 const initPage = () => {
+    todoList = fetchData('todoList');
+    projectList = fetchData('projectList');
+    if (todoList) {
+        renderList('todoList', todoList);
+    }
+    if (projectList) {
+        renderList('projectList', projectList);
+    }
+    
+    
     //initiate initial page elements
     var addBtn = document.querySelector('.add-btn');
     var delBtn = document.querySelector('.delete-item');

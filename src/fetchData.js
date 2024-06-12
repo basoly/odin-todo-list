@@ -1,6 +1,6 @@
 const fetchData = (list) => {
   // delete existing list
-  
+  let currentList;
   if (list == 'todoList') {
     currentList = JSON.parse(localStorage.getItem('todoList'))
   } else if (list == 'projectList') {
@@ -12,3 +12,5 @@ const fetchData = (list) => {
 
   return currentList
 }
+
+export default fetchData

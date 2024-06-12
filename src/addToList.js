@@ -1,13 +1,24 @@
-import deleteItem from "./deleteItem";
+import fetchData from './fetchData';
+import saveData from './saveData'
 
 // add item to DOM
 
 const addToList = (newItem) => {
+    let todoList = fetchData('todoList')
 
-    todoList.push(newItem);
+    if (todoList) {
+        todoList.push(newItem);
+        saveData('todoList',todoList);
+    } else {
+        todoList = [];
+        todoList.push(newItem);
+        saveData('todoList', todoList);
+    }
+
+
     console.log(todoList);
-    
 
+    return todoList
 
 
 

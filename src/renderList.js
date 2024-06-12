@@ -1,3 +1,5 @@
+import deleteItem from "./deleteItem";
+
 const renderList = (list, array) => {
   // to render lists to the DOM
   
@@ -83,3 +85,5 @@ const renderList = (list, array) => {
     }
   }
 }
+
+export default renderList

@@ -2,6 +2,7 @@
 // import statements
 import addToList from './addToList'
 import createItem from './createItem';
+import renderList from './renderList';
 
 const addItem = () => {
     var title = document.querySelector("#title");
@@ -11,8 +12,8 @@ const addItem = () => {
 
     var newItem = createItem(title.value, desc.value, due.value, priority.value);
 
-    addToList(newItem);
-
+    let currentList = addToList(newItem);
+    renderList('todoList', currentList);
     var elements = [title, desc, due, priority];
 
     for (const input of elements) {
