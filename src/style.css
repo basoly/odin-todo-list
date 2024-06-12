@@ -47,7 +47,9 @@ body {
 .proj-header {
   border: 1px dashed black;
   background: aquamarine;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+
 }
 
 .proj-item {
@@ -94,8 +96,6 @@ body {
   gap: 10px;
 }
 
-
-
 .input-container {
   display: flex;
   flex-flow: row nowrap;
@@ -113,7 +113,7 @@ input {
   width: 20px;
   color: white;
   font-family: Arial, sans-serif;
-  /* text-align: center; */
+
 
 }
 
@@ -124,9 +124,17 @@ input {
   border-radius: 5px;
   width: 20px;
   color: white;
-  /* text-align: center; */
 }
 
 .fields {
   background-color: wheat;
+}
+
+.add-project {
+  width: 20px;
+}
+
+#projectTitle {
+  margin-right: auto;
+  flex-grow: 2;
 }

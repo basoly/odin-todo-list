@@ -1,6 +1,7 @@
 import addItem from "./addItem";
-import deleteItem from "./deleteItem"
-import completeItem from "./completeItem"
+import deleteItem from "./deleteItem";
+// import completeItem from "./completeItem"
+import addProject from "./addProject";
 
 // add event handler to add button
 var todoList = [];
@@ -11,6 +12,7 @@ const initPage = () => {
     var addBtn = document.querySelector('.add-btn');
     var delBtn = document.querySelector('.delete-item');
     var doneBtn = document.querySelector('.done-btn');
+    var addProj = document.querySelector('.add-project')
 
     if (addBtn) {
         addBtn.addEventListener('click', addItem);
@@ -20,8 +22,12 @@ const initPage = () => {
         delBtn.addEventListener('click', deleteItem);
     }
 
-    if (doneBtn) {
-        doneBtn.addEventListener('click', completeItem);
+    // if (doneBtn) {
+    //     doneBtn.addEventListener('click', completeItem);
+    // }
+
+    if (addProj) {
+        addProj.addEventListener('click', addProject);
     }
 
 
