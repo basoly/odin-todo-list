@@ -1,34 +1,45 @@
 import createProject from './createProject'
 
 // newProj = createProject(projectTitleInput.value)
-const addProject2 = (newProject) => {
-  projectList.push(newProject);
+// const addProject2 = (newProject) => {
+//   projectList.push(newProject);
+//   console.log(projectList);
+// }
+
+const addProject = () => {
+  let title = document.querySelector('#projectTitleInput');
+  let newProj = createProject(title.value);
+  projectList.push(newProj);
   console.log(projectList);
-}
 
-const addProject = (newProj) => {
-    var title = newProj.title;
-    var newElem = document.createElement('li');
-    newElem.classList.add('proj-item');
-    newElem.setAttribute('id', newProj.id);
-    // add to DOM function
-    var titleContainer = document.createElement('div');
-    var delBtn = document.createElement('button');
-    delBtn.classList.add('delete-item');
-    delBtn.setAttribute('type', 'button');
-    delBtn.innerHTML = 'X';
+  renderList('projectList', projectList);
+  title.value = '';
 
-    titleContainer = title;
-    delBtn.addEventListener('click', deleteItem);
 
-    var elements = [titleContainer, delBtn]
 
-    for (const elem of elements) {
-        newElem.appendChild(elem);
-    }
+  
+    // var title = newProj.title;
+    // var newElem = document.createElement('li');
+    // newElem.classList.add('proj-item');
+    // newElem.setAttribute('id', newProj.id);
+    // // add to DOM function
+    // var titleContainer = document.createElement('div');
+    // var delBtn = document.createElement('button');
+    // delBtn.classList.add('delete-item');
+    // delBtn.setAttribute('type', 'button');
+    // delBtn.innerHTML = 'X';
 
-    var projList = document.querySelector('.projects')
-    projList.appendChild(newElem);
+    // titleContainer = title;
+    // delBtn.addEventListener('click', deleteItem);
+
+    // var elements = [titleContainer, delBtn]
+
+    // for (const elem of elements) {
+    //     newElem.appendChild(elem);
+    // }
+
+    // var projList = document.querySelector('.projects')
+    // projList.appendChild(newElem);
 
 }
 

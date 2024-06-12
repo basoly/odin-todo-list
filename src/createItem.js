@@ -8,7 +8,7 @@ const createItem = (title, desc, dueDate, priority) => {
     }
 
     var id = uid();
-    return {title: title, description: desc, due: dueDate, priority: priority, id: id}
+    return {title: title, description: desc, due: dueDate, priority: priority, id: id, project: 'default'}
 }
 
 export default createItem
