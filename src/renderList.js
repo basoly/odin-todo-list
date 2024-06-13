@@ -34,6 +34,9 @@ const renderList = (list, array) => {
       delBtn.classList.add('delete-item');
       delBtn.setAttribute('type', 'button');
       delBtn.innerHTML = 'X';
+
+      // NEED TO ADD: drop down menu to change projects. Reads values from current project list
+
       // Transfering info from form input to DOM element
       label.innerHTML = title;
       dueDate.innerHTML = `<div>Due: ${item.due}</div>`;
