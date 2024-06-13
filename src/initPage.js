@@ -7,7 +7,7 @@ import fetchData from "./fetchData";
 
 // add event handler to add button
 var todoList = [];
-var projectList = [];
+var projectList = ['default'];
 
 const initPage = () => {
     todoList = fetchData('todoList');

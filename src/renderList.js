@@ -1,4 +1,5 @@
 import deleteItem from "./deleteItem";
+import switchTabs from "./switchTabs";
 
 const renderList = (list, array) => {
   // to render lists to the DOM
@@ -9,7 +10,7 @@ const renderList = (list, array) => {
     var listContainer = document.querySelector('.todo-container')
     listContainer.innerHTML = '';
     // for each key, generate the DOM items
-    for (const item of array) {
+    for (let item of array) {
       var title = item.title;
       var newElem = document.createElement('li');
       newElem.classList.add('todo-item');
@@ -56,10 +57,12 @@ const renderList = (list, array) => {
   } else if (list == 'projectList') {
     // delete current items in projects container
     // add to respective container
-    alert('project List code');
+
     var listContainer = document.querySelector('.project-list');
     listContainer.innerHTML = '';
+
         // for each key, generate the DOM items
+
     for (const item of array) {
       var title = item.title;
       console.log(title);
@@ -80,12 +83,11 @@ const renderList = (list, array) => {
 
       newElem.appendChild(titleContainer);
       newElem.appendChild(delBtn);
+      newElem.addEventListener('click', switchTabs);
 
-
-      console.log('append child loop #2');
       listContainer.appendChild(newElem);
-      console.log('Project List updated');
-    }
+      
+    } console.log('Project List updated');
   }
 }
 
